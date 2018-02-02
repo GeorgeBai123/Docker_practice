@@ -1,0 +1,16 @@
+
+
+docker 容器导入导出有两种方法：
+
+一种是使用 save 和 load 命令
+
+使用例子如下：
+
+docker save ubuntu:load>/root/ubuntu.tar
+docker load<ubuntu.tar
+一种是使用 export 和 import 命令
+
+使用例子如下：
+
+docker export 98ca36> ubuntu.tar
+cat ubuntu.tar | sudo docker import - ubuntu:import
